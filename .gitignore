@@ -1,6 +1,25 @@
-.idea
-.venv
-# env
+@'
+# --- Secrets / env ---
 .env
 *.env
 
+# --- Python build ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# --- Django runtime ---
+db.sqlite3
+*.sqlite3
+media/
+staticfiles/        # если у тебя есть collectstatic
+# !static/          # статические исходники оставляем (этот коммент просто напоминание)
+
+# --- IDE ---
+.vscode/
+.idea/
+'@ | Add-Content .gitignore
+
+git add .gitignore
+git commit -m "chore: extend .gitignore (env, pyc, db, media)"
