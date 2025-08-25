@@ -3,4 +3,6 @@
 # env files
 .env
 *.env
+db.sqlite3
+
 
